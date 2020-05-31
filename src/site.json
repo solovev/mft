@@ -1,192 +1,619 @@
-[
-  {
-    "id": "100",
-    "description": "Площадка, отрисовываемая на карте по координатам",
-    "type": "Site",
-    "baseType": "Resource",
-    "name": "Жуков 55",
-    "resourceCharacteristic": [
-      {
-        "name": "siteAddress",
-        "value": "Ленинградская обл., г. Санкт-Петербург, пр. Маршала Жукова, 55"
-      },
-      {
-        "name": "siteNumber",
-        "value": "900055"
-      },
-      {
-        "name": "latitude",
-        "value": "59.94966856"
-      },
-      {
-        "name": "longitude",
-        "value": "30.26677609"
-      }
-    ],
-    "resourceRelationship": [
-      {
-        "id": "10",
-        "relationshipType": "refersTo"
-      },
-      {
-        "id": "101",
-        "relationshipType": "refersTo"
-      }
-    ]
-  },
-  {
-    "id": "101",
-    "description": "Базовая станция",
-    "type": "BaseStation",
-    "name": "Жуков 55-1",
-    "resourceCharacteristic": [
-      {
-        "name": "coverType",
-        "value": "INDOOR"
-      },
-      {
-        "name": "cabinetType",
-        "value": [
-          "LTE",
-          "3G"
-        ]
-      }
-    ],
-    "resourceRelationship": [
-      {
-        "id": "1",
-        "relationshipType": "refersTo"
-      },
-      {
-        "id": "2",
-        "relationshipType": "refersTo"
-      },
-      {
-        "id": "3",
-        "relationshipType": "refersTo"
-      },
-      {
-        "id": "10",
-        "relationshipType": "refersTo"
-      },
-      {
-        "id": "100",
-        "relationshipType": "refersTo"
-      }
-    ]
-  },
-  {
-    "id": "1",
-    "name": "Antenna_RAN",
-    "description": "Антенна радиодоступа (прямоугольник на АМС). Сектор 1",
-    "type": "Antenna_RAN",
-    "baseType": "Antenna",
-    "resourceCharacteristic": [
-      {
-        "name": "mountHeight",
-        "valueType": "meters",
-        "value": "25"
-      },
-      {
-        "name": "tiltAngle",
-        "valueType": "degree",
-        "value": "3"
-      },
-      {
-        "name": "azimuth",
-        "valueType": "degree",
-        "value": "150",
-        "description": "угол 'зеленой' секции"
-      }
-    ],
-    "resourceRelationship": [
-      {
-        "id": "101",
-        "relationshipType": "refersTo"
-      }
-    ]
-  },
-  {
-    "id": "2",
-    "type": "Antenna_RAN",
-    "description": "Антенна радиодоступа (прямоугольник на АМС). Сектор 2",
-    "baseType": "Antenna",
-    "resourceCharacteristic": [
-      {
-        "name": "mountHeight",
-        "value": "25"
-      },
-      {
-        "name": "tiltAngle",
-        "value": "3"
-      },
-      {
-        "name": "azimuth",
-        "valueType": "degree",
-        "value": "0"
-      }
-    ],
-    "resourceRelationship": [
-      {
-        "id": "101",
-        "relationshipType": "refersTo"
-      }
-    ]
-  },
-  {
-    "id": "3",
-    "type": "Antenna_RAN",
-    "description": "Антенна радиодоступа (прямоугольник на АМС). Сектор 3",
-    "baseType": "Antenna",
-    "resourceCharacteristic": [
-      {
-        "name": "mountHeight",
-        "value": "25"
-      },
-      {
-        "name": "tiltAngle",
-        "value": "3"
-      },
-      {
-        "name": "azimuth",
-        "valueType": "degree",
-        "value": "30"
-      }
-    ],
-    "resourceRelationship": [
-      {
-        "id": "101",
-        "relationshipType": "refersTo"
-      }
-    ]
-  },
-  {
-    "id": "10",
-    "type": "AMC",
-    "description": "Антенно-мачтовое сооружение",
-    "resourceCharacteristic": [
-      {
-        "name": "constructionType",
-        "value": "REINFORCED_CONCRETE"
-      },
-      {
-        "name": "groundingType",
-        "value": "BUILDING"
-      },
-      {
-        "name": "height",
-        "value": "30"
-      }
-    ],
-    "resourceRelationship": [
-      {
-        "id": "100",
-        "relationshipType": "refersTo"
-      },
-      {
-        "id": "101",
-        "relationshipType": "refersTo"
-      }
-    ]
-  }
-]
+{
+  "A": [
+    {
+      "id": "1",
+      "name": "Antenna_RAN",
+      "description": "Антенна радиодоступа (прямоугольник на АМС). Сектор 1",
+      "type": "Antenna_RAN",
+      "baseType": "Antenna",
+      "resourceCharacteristic": [
+        {
+          "name": "mountHeight",
+          "valueType": "meters",
+          "value": "25"
+        },
+        {
+          "name": "tiltAngle",
+          "valueType": "degree",
+          "value": "3"
+        },
+        {
+          "name": "azimuth",
+          "valueType": "degree",
+          "value": "150",
+          "description": "угол 'зеленой' секции"
+        }
+      ],
+      "resourceRelationship": [
+        {
+          "id": "101",
+          "relationshipType": "refersTo"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "type": "Antenna_RAN",
+      "description": "Антенна радиодоступа (прямоугольник на АМС). Сектор 2",
+      "baseType": "Antenna",
+      "resourceCharacteristic": [
+        {
+          "name": "mountHeight",
+          "value": "25"
+        },
+        {
+          "name": "tiltAngle",
+          "value": "3"
+        },
+        {
+          "name": "azimuth",
+          "valueType": "degree",
+          "value": "0"
+        }
+      ],
+      "resourceRelationship": [
+        {
+          "id": "101",
+          "relationshipType": "refersTo"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "type": "Antenna_RAN",
+      "description": "Антенна радиодоступа (прямоугольник на АМС). Сектор 3",
+      "baseType": "Antenna",
+      "resourceCharacteristic": [
+        {
+          "name": "mountHeight",
+          "value": "25"
+        },
+        {
+          "name": "tiltAngle",
+          "value": "3"
+        },
+        {
+          "name": "azimuth",
+          "valueType": "degree",
+          "value": "30"
+        }
+      ],
+      "resourceRelationship": [
+        {
+          "id": "101",
+          "relationshipType": "refersTo"
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "type": "AMC",
+      "description": "Антенно-мачтовое сооружение",
+      "resourceCharacteristic": [
+        {
+          "name": "constructionType",
+          "value": "REINFORCED_CONCRETE"
+        },
+        {
+          "name": "groundingType",
+          "value": "BUILDING"
+        },
+        {
+          "name": "height",
+          "value": "30"
+        }
+      ],
+      "resourceRelationship": [
+        {
+          "id": "100",
+          "relationshipType": "refersTo"
+        },
+        {
+          "id": "101",
+          "relationshipType": "refersTo"
+        }
+      ]
+    },
+    {
+      "id": "100",
+      "description": "Площадка, отрисовываемая на карте по координатам",
+      "type": "Site",
+      "baseType": "Resource",
+      "name": "Жуков 55",
+      "resourceCharacteristic": [
+        {
+          "name": "siteAddress",
+          "value": "Ленинградская обл., г. Санкт-Петербург, пр. Маршала Жукова, 55"
+        },
+        {
+          "name": "siteNumber",
+          "value": "900055"
+        },
+        {
+          "name": "latitude",
+          "value": "59.94966856"
+        },
+        {
+          "name": "longitude",
+          "value": "30.26677609"
+        }
+      ],
+      "resourceRelationship": [
+        {
+          "id": "10",
+          "relationshipType": "refersTo"
+        },
+        {
+          "id": "101",
+          "relationshipType": "refersTo"
+        },
+        {
+          "id": "103",
+          "relationshipType": "refersTo"
+        },
+        {
+          "id": "111",
+          "relationshipType": "refersTo"
+        },
+        {
+          "id": "114",
+          "relationshipType": "refersTo"
+        }
+      ]
+    },
+    {
+      "id": "101",
+      "description": "Базовая станция",
+      "type": "BaseStation",
+      "name": "Жуков 55-1",
+      "resourceCharacteristic": [
+        {
+          "name": "coverType",
+          "value": "INDOOR"
+        },
+        {
+          "name": "cabinetType",
+          "value": [
+            "LTE",
+            "3G"
+          ]
+        }
+      ],
+      "resourceRelationship": [
+        {
+          "id": "1",
+          "relationshipType": "refersTo"
+        },
+        {
+          "id": "2",
+          "relationshipType": "refersTo"
+        },
+        {
+          "id": "3",
+          "relationshipType": "refersTo"
+        },
+        {
+          "id": "10",
+          "relationshipType": "refersTo"
+        },
+        {
+          "id": "100",
+          "relationshipType": "refersTo"
+        }
+      ]
+    },
+    {
+      "id": "102",
+      "type": "AMC",
+      "description": "Антенно-мачтовое сооружение",
+      "resourceCharacteristic": [
+        {
+          "name": "constructionType",
+          "value": "MAIN_CONCRETE"
+        },
+        {
+          "name": "groundingType",
+          "value": "GROUND"
+        },
+        {
+          "name": "height",
+          "value": "30"
+        }
+      ],
+      "resourceRelationship": [
+        {
+          "id": "100",
+          "relationshipType": "refersTo"
+        },
+        {
+          "id": "103",
+          "relationshipType": "refersTo"
+        }
+      ]
+    },
+    {
+      "id": "103",
+      "description": "Базовая станция",
+      "type": "BaseStation",
+      "name": "Station 2",
+      "resourceCharacteristic": [
+        {
+          "name": "coverType",
+          "value": "OUTDOOR"
+        },
+        {
+          "name": "cabinetType",
+          "value": [
+            "3G",
+            "2G"
+          ]
+        }
+      ],
+      "resourceRelationship": [
+        {
+          "id": "100",
+          "relationshipType": "refersTo"
+        },
+        {
+          "id": "102",
+          "relationshipType": "refersTo"
+        },
+        {
+          "id": "104",
+          "relationshipType": "refersTo"
+        },
+        {
+          "id": "105",
+          "relationshipType": "refersTo"
+        },
+        {
+          "id": "106",
+          "relationshipType": "refersTo"
+        },
+        {
+          "id": "107",
+          "relationshipType": "refersTo"
+        },
+        {
+          "id": "108",
+          "relationshipType": "refersTo"
+        },
+        {
+          "id": "109",
+          "relationshipType": "refersTo"
+        }
+      ]
+    },
+    {
+      "id": "104",
+      "name": "Antenna_RAN",
+      "description": "Антенна радиодоступа (прямоугольник на АМС). Сектор 1",
+      "type": "Antenna_RAN",
+      "baseType": "Antenna",
+      "resourceCharacteristic": [
+        {
+          "name": "mountHeight",
+          "valueType": "meters",
+          "value": 8
+        },
+        {
+          "name": "tiltAngle",
+          "valueType": "degree",
+          "value": 2
+        },
+        {
+          "name": "azimuth",
+          "valueType": "degree",
+          "value": -175
+        }
+      ],
+      "resourceRelationship": [
+        {
+          "id": "103",
+          "relationshipType": "refersTo"
+        }
+      ]
+    },
+    {
+      "id": "105",
+      "name": "Antenna_RAN",
+      "description": "Антенна радиодоступа (прямоугольник на АМС). Сектор 2",
+      "type": "Antenna_RAN",
+      "baseType": "Antenna",
+      "resourceCharacteristic": [
+        {
+          "name": "mountHeight",
+          "valueType": "meters",
+          "value": 2
+        },
+        {
+          "name": "tiltAngle",
+          "valueType": "degree",
+          "value": 8
+        },
+        {
+          "name": "azimuth",
+          "valueType": "degree",
+          "value": 142
+        }
+      ],
+      "resourceRelationship": [
+        {
+          "id": "103",
+          "relationshipType": "refersTo"
+        }
+      ]
+    },
+    {
+      "id": "106",
+      "name": "Antenna_RAN",
+      "description": "Антенна радиодоступа (прямоугольник на АМС). Сектор 3",
+      "type": "Antenna_RAN",
+      "baseType": "Antenna",
+      "resourceCharacteristic": [
+        {
+          "name": "mountHeight",
+          "valueType": "meters",
+          "value": 18
+        },
+        {
+          "name": "tiltAngle",
+          "valueType": "degree",
+          "value": 9
+        },
+        {
+          "name": "azimuth",
+          "valueType": "degree",
+          "value": 196
+        }
+      ],
+      "resourceRelationship": [
+        {
+          "id": "103",
+          "relationshipType": "refersTo"
+        }
+      ]
+    },
+    {
+      "id": "107",
+      "name": "Antenna_RAN",
+      "description": "Антенна радиодоступа (прямоугольник на АМС). Сектор 4",
+      "type": "Antenna_RAN",
+      "baseType": "Antenna",
+      "resourceCharacteristic": [
+        {
+          "name": "mountHeight",
+          "valueType": "meters",
+          "value": 28
+        },
+        {
+          "name": "tiltAngle",
+          "valueType": "degree",
+          "value": 3
+        },
+        {
+          "name": "azimuth",
+          "valueType": "degree",
+          "value": -36
+        }
+      ],
+      "resourceRelationship": [
+        {
+          "id": "103",
+          "relationshipType": "refersTo"
+        }
+      ]
+    },
+    {
+      "id": "108",
+      "name": "Antenna_RAN",
+      "description": "Антенна радиодоступа (прямоугольник на АМС). Сектор 5",
+      "type": "Antenna_RAN",
+      "baseType": "Antenna",
+      "resourceCharacteristic": [
+        {
+          "name": "mountHeight",
+          "valueType": "meters",
+          "value": 10
+        },
+        {
+          "name": "tiltAngle",
+          "valueType": "degree",
+          "value": 2
+        },
+        {
+          "name": "azimuth",
+          "valueType": "degree",
+          "value": 151
+        }
+      ],
+      "resourceRelationship": [
+        {
+          "id": "103",
+          "relationshipType": "refersTo"
+        }
+      ]
+    },
+    {
+      "id": "109",
+      "name": "Antenna_RAN",
+      "description": "Антенна радиодоступа (прямоугольник на АМС). Сектор 6",
+      "type": "Antenna_RAN",
+      "baseType": "Antenna",
+      "resourceCharacteristic": [
+        {
+          "name": "mountHeight",
+          "valueType": "meters",
+          "value": 6
+        },
+        {
+          "name": "tiltAngle",
+          "valueType": "degree",
+          "value": 6
+        },
+        {
+          "name": "azimuth",
+          "valueType": "degree",
+          "value": 33
+        }
+      ],
+      "resourceRelationship": [
+        {
+          "id": "103",
+          "relationshipType": "refersTo"
+        }
+      ]
+    },
+    {
+      "id": "110",
+      "type": "AMC",
+      "description": "Антенно-мачтовое сооружение",
+      "resourceCharacteristic": [
+        {
+          "name": "constructionType",
+          "value": "REINFORCED_CONCRETE"
+        },
+        {
+          "name": "groundingType",
+          "value": "BUILDING"
+        },
+        {
+          "name": "height",
+          "value": "30"
+        }
+      ],
+      "resourceRelationship": [
+        {
+          "id": "100",
+          "relationshipType": "refersTo"
+        },
+        {
+          "id": "111",
+          "relationshipType": "refersTo"
+        }
+      ]
+    },
+    {
+      "id": "111",
+      "description": "Базовая станция",
+      "type": "BaseStation",
+      "name": "Station 3",
+      "resourceCharacteristic": [
+        {
+          "name": "coverType",
+          "value": "OUTDOOR"
+        },
+        {
+          "name": "cabinetType",
+          "value": [
+            "3G",
+            "LTE",
+            "5G"
+          ]
+        }
+      ],
+      "resourceRelationship": [
+        {
+          "id": "100",
+          "relationshipType": "refersTo"
+        },
+        {
+          "id": "110",
+          "relationshipType": "refersTo"
+        },
+        {
+          "id": "112",
+          "relationshipType": "refersTo"
+        }
+      ]
+    },
+    {
+      "id": "112",
+      "name": "Antenna_RAN",
+      "description": "Антенна радиодоступа (прямоугольник на АМС). Сектор 1",
+      "type": "Antenna_RAN",
+      "baseType": "Antenna",
+      "resourceCharacteristic": [
+        {
+          "name": "mountHeight",
+          "valueType": "meters",
+          "value": 25
+        },
+        {
+          "name": "tiltAngle",
+          "valueType": "degree",
+          "value": 2
+        },
+        {
+          "name": "azimuth",
+          "valueType": "degree",
+          "value": 335
+        }
+      ],
+      "resourceRelationship": [
+        {
+          "id": "111",
+          "relationshipType": "refersTo"
+        }
+      ]
+    },
+    {
+      "id": "114",
+      "description": "Базовая станция",
+      "type": "BaseStation",
+      "name": "Station 4",
+      "resourceCharacteristic": [
+        {
+          "name": "coverType",
+          "value": "INDOOR"
+        },
+        {
+          "name": "cabinetType",
+          "value": [
+            "3G",
+            "2G"
+          ]
+        }
+      ],
+      "resourceRelationship": [
+        {
+          "id": "100",
+          "relationshipType": "refersTo"
+        },
+        {
+          "id": "113",
+          "relationshipType": "refersTo"
+        }
+      ]
+    },
+    {
+      "id": "113",
+      "type": "AMC",
+      "description": "Антенно-мачтовое сооружение",
+      "resourceCharacteristic": [
+        {
+          "name": "constructionType",
+          "value": "REINFORCED_CONCRETE"
+        },
+        {
+          "name": "groundingType",
+          "value": "GROUND"
+        },
+        {
+          "name": "height",
+          "value": "30"
+        }
+      ],
+      "resourceRelationship": [
+        {
+          "id": "100",
+          "relationshipType": "refersTo"
+        },
+        {
+          "id": "114",
+          "relationshipType": "refersTo"
+        }
+      ]
+    }
+  ]
+}

@@ -1,24 +1,10 @@
-# mft
+# MF test
 
-## Project setup
+## Запуск
 ```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn serve
+$ git clone https://github.com/solovev/mft.git
+$ cd mft
+$ npm install && npm run serve
 ```
 
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Адрес: [http://localhost:8080/](http://localhost:8080/ ).

@@ -2,6 +2,9 @@ const path = require('path')
 
 const stylesDir = 'styles'
 module.exports = {
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/mft_dist/'
+    : '/',
   css: {
     loaderOptions: {
       sass: {

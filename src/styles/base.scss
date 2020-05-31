@@ -13,6 +13,10 @@ body {
 body {
   background-color: $page-background-color;
   overflow-y: scroll;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #fff;
 }
 
 textarea::-webkit-scrollbar,
@@ -52,5 +56,21 @@ ul {
   &.selected {
     color: #fff !important;
     background-color: $primary-color;
+  }
+}
+
+.ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.text-center {
+  text-align: center;
+}
+
+svg {
+  .stroke {
+    stroke: $site-path-color;
   }
 }
